@@ -1,12 +1,4 @@
-export interface Event {
-    id: number;
-    title: string;
-    date: string;
-    location: string;
-    description: string;
-    availableTickets: number;
-    price: number;
-}
+import { Event } from "../types/types";
 
 export const events: Event[] = [
     {
@@ -57,7 +49,7 @@ export const events: Event[] = [
         description:
             "Outdoor concert featuring regional indie and alternative artists along the downtown riverfront.",
         availableTickets: 300,
-        price: 40,
+        price: 0,
     },
     {
         id: 6,

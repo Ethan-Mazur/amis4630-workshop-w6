@@ -1,4 +1,5 @@
-import { Event } from "../data/events";
+import { Event } from "../types/types";
+import { EventCard } from "./EventCard";
 
 interface EventListProps {
   events: Event[];
@@ -12,7 +13,7 @@ export function EventList({ events }: EventListProps) {
   return (
     <div className="event-list">
       {events.map((event) => (
-        <h2>{event.title}</h2>
+        <EventCard key={event.id} event={event} />
       ))}
     </div>
   );

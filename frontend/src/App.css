@@ -16,11 +16,12 @@
 }
 
 .event-card {
-  background: #1a1a2e;
-  border: 1px solid #333;
+  background: white;
+  border: 2px solid var(--ohio-state-gray);
   border-radius: 8px;
   padding: 1.5rem;
   text-align: left;
+  box-shadow: 0 2px 8px rgba(187, 0, 0, 0.1);
 }
 
 .event-card h2 {
@@ -31,7 +32,7 @@
 .event-date,
 .event-location {
   margin: 0.25rem 0;
-  color: #aaa;
+  color: var(--ohio-state-gray);
   font-size: 0.9rem;
 }
 
@@ -42,12 +43,12 @@
 
 .event-price {
   font-weight: bold;
-  color: #61dafb;
+  color: var(--ohio-state-scarlet);
 }
 
 .ticket-counter {
   margin-top: 1rem;
-  border-top: 1px solid #333;
+  border-top: 2px solid var(--ohio-state-light-gray);
   padding-top: 1rem;
 }
 
@@ -81,7 +82,7 @@
 
 .selection-summary {
   margin-top: 0.5rem;
-  color: #61dafb;
+  color: var(--ohio-state-scarlet);
   font-size: 0.9rem;
 }
 
