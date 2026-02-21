@@ -2,11 +2,13 @@ import { useState } from 'react';
 
 interface TicketCounterProps {
   maxTickets: number;
+  price: number;
   onCountChange?: (count: number) => void;
 }
 
-export function TicketCounter({ maxTickets, onCountChange }: TicketCounterProps) {
+export function TicketCounter({ maxTickets, price, onCountChange }: TicketCounterProps) {
   const [count, setCount] = useState(0);
+  const totalPrice = count * price;
 
   const increment = () => {
     if (count < maxTickets) {
@@ -33,6 +35,11 @@ export function TicketCounter({ maxTickets, onCountChange }: TicketCounterProps)
       </div>
       <div className="selection-summary">
         Tickets selected ({maxTickets} available)
+        {count > 0 && (
+          <div>
+            Total Price: {price > 0 ? `$${totalPrice.toFixed(2)}` : 'free'}
+          </div>
+        )}
       </div>
     </div>
   );

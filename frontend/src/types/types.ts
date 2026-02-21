@@ -6,4 +6,5 @@ export interface Event {
     description: string;
     availableTickets: number;
     price: number;
+    category: string;
 }

@@ -18,8 +18,8 @@ export function EventCard({ event }: EventCardProps) {
       <p className="event-location">Location: {event.location}</p>
       <p className="event-description">{event.description}</p>
       <p>Available Tickets: {event.availableTickets}</p>
-      <p className="event-price">Price: {event.price > 0 ? `$${event.price}` : "free"}</p>
-      <TicketCounter maxTickets={event.availableTickets} onCountChange={handleTicketCountChange} />
+      <p className="event-price">Price per ticket: {event.price > 0 ? `$${event.price}` : "free"}</p>
+      <TicketCounter maxTickets={event.availableTickets} price={event.price} onCountChange={handleTicketCountChange} />
     </div>
   );
 }
